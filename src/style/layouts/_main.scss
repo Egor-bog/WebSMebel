@@ -1,0 +1,89 @@
+.main {
+  background-color: $color-bg;
+  padding-top: 7rem;
+
+    &__wrapper {
+        padding-top: 5rem;
+
+        /*
+        max-width: $content-width;
+        background-image: url('../../../img/main_page/диван\ Челси\ 3\ ех\ местный\ прямой\ ткань\ Omega\ 37.jpg');
+        background-size: cover;
+        overflow: hidden;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;*/
+        
+    }
+    
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    @include media-mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+
+    &__img {
+        max-width: 90rem;
+        @include media-mobile {
+            max-width: 45rem;
+            
+        }
+
+        .sofa {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.content__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-mobile {
+        align-items: center;
+    }
+
+}
+
+.content__title__up__text {
+    padding-top: 1rem;
+    @include h3();
+    letter-spacing: 0.2rem;
+}
+
+.content__title__up__textsub {
+    padding-top: 1rem;
+    @include h3();
+    letter-spacing: 0.2rem;
+}
+
+.content__title__down {
+    padding-bottom: 5rem;
+    @include media-mobile {
+        padding-top: 3rem;
+    }
+}
+.content__title__up__button {
+    @include h3();
+    font-size : 2.2rem;
+    letter-spacing: 0.4rem;
+    padding: 1.4rem 2rem;
+    color: #fff; 
+    text-decoration: none; 
+    user-select: none; 
+    background: #2e3238;
+    padding: 1.4rem 8rem; 
+    outline: none; /* убирать контур в Mozilla */
+    transition: all .3s;
+}
+
+.content__title__up__button:hover {
+    color: rgb(175, 174, 174);
+}

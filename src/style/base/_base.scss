@@ -1,0 +1,15 @@
+:root {
+    font-size: 10px;
+    @include media-laptop {
+      font-size: 8px;
+  }
+  
+}
+
+* {
+  box-sizing: border-box;  
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
