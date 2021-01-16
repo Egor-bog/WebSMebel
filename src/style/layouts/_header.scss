@@ -42,7 +42,7 @@ header {
     display: flex;
     flex-flow:column;
     height: 100%;
-    background-color: #2a2a2a;
+    background-color:  rgba(0, 0, 0, 0);
     overflow-y: auto;
     left: -100%;
     transition: 1s;
@@ -55,7 +55,7 @@ header {
 .burger-menu__link {
     padding: 3rem;
     @include h3;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     color: #FFF;
     transition: 0.4s;
@@ -79,7 +79,7 @@ header {
 
 .burger-menu__active .burger-menu__overlay {
     display: block;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: 1s;
 }
 
