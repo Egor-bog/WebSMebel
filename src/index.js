@@ -1,10 +1,10 @@
 console.log('Hello');
-function burgerMenu() {
+
+function burgerMenu(selector) {
     let menu = document.querySelector(".burger-menu");
-    let button = menu.querySelector(".burger-menu__button");
+    let button = menu.querySelector(".nav__burger__img")
     let links = menu.querySelector(".burger-menu__link");
     let overlay = menu.querySelector(".burger-menu__overlay");
-
 
     button.addEventListener("click", (e) => {
         e.preventDefault();
@@ -15,14 +15,15 @@ function burgerMenu() {
     });
     overlay.addEventListener("click", () => toggleMenu());
 
-
     function toggleMenu() {
-        menu.classList.toggle("burger-menu_active");
-        if (menu.classList.contains("burger-menu_active")) {
+        menu.classList.toggle("burger-menu__active");
+        if (menu.classList.contains("burger-menu__active")) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "visible";
         }
     }
+
 }
-burgerMenu();
+
+burgerMenu ();

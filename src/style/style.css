@@ -106,8 +106,71 @@ header {
   letter-spacing: 0.2rem;
 }
 
+.burger-menu__active .nav__burger__img {
+  /* Для Firefox */
+  /* Для IE */
+  /* Для Safari, Chrome, iOS */
+  /* Для Opera */
+  transform: rotate(90deg);
+  transition: 1s;
+}
+
+.burger-menu__nav {
+  padding-top: 7rem;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #2a2a2a;
+  overflow-y: auto;
+  left: -100%;
+  transition: 1s;
+}
+
+.burger-menu__active .burger-menu__nav {
+  left: 0;
+}
+
+.burger-menu__link {
+  padding: 3rem;
+  font-family: 'Gordita', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #FFF;
+  transition: 0.4s;
+}
+
+.burger-menu__link:hover {
+  filter: brightness(0.7);
+  transition: 0.4s;
+}
+
+.burger-menu__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 10;
+  transition: 1s;
+}
+
+.burger-menu__active .burger-menu__overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
 .nav__burger__img {
   width: 3rem;
+  transition: 1s;
 }
 
 .nav__basket__img {
