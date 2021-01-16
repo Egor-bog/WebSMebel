@@ -433,4 +433,11 @@ h3 {
 .end {
   height: 10rem;
 }
+
+.first-img {
+  background-image: url("../../../img/about_us/диван Челси 3 ех местный прямой ткань Omega 37.jpg");
+  background-position: bottom;
+  background-size: 100%;
+  height: 40vw;
+}
 /*# sourceMappingURL=style.css.map */
