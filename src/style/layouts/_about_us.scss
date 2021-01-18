@@ -74,6 +74,54 @@
     color: #000
 }
 
+.us {
+    background-color: $color-bg;
+}
+
+.second-title {
+    text-align: center;
+    @include h2;
+    font-size: 4rem;
+    padding-top: 10rem;
+}
+
+.second-bloc {
+    display: flex;
+    justify-content: space-around;
+    @include media-mobile {
+        flex-direction: column;
+    }
+}
+
+.second-bloc__1 {
+    width: -webkit-fill-available;
+}
+
+.second-bloc__2 {
+    display: flex;
+    justify-content: center;
+}
+
+.second-bloc__2 img {
+    width: 15rem;
+}
+
+.second-bloc__3 {
+    text-align: center
+}
+
+.second-bloc__3 p {
+    @include text;
+    font-size: 2rem;
+}
+
+.second-bloc__3 span {
+    @include h2;
+    font-size: 3rem;
+
+}
+
+
 .content__form {
     display: flex;
     justify-content: center;
