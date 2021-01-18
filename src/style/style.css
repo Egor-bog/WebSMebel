@@ -102,7 +102,6 @@ header {
   font-size: 2.4rem;
   text-decoration: none;
   color: #06070c;
-  width: 15rem;
   letter-spacing: 0.2rem;
 }
 
@@ -221,7 +220,6 @@ header {
   font-size: 16px;
   text-decoration: none;
   font-weight: 400;
-  margin-right: 25px;
   width: 80px;
   transition: .3s;
 }
@@ -438,7 +436,25 @@ h3 {
   background-image: url("../../img/about_us/диван Челси 3 ех местный прямой ткань Omega 37.jpg");
   background-position: bottom;
   background-size: 100%;
-  height: 40vw;
+  height: 65rem;
+}
+
+@media (max-width: 1200px) {
+  .first-img {
+    height: 52rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-img {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .first-img {
+    height: 27rem;
+  }
 }
 
 .first-content {
@@ -459,9 +475,15 @@ h3 {
   background-color: #f6f6f6;
 }
 
+@media (max-width: 414px) {
+  .section3 .wrapper {
+    height: 35rem;
+  }
+}
+
 .wrapper-backgr-img {
   background-image: url("../../img/about_us/sofa-clip-art-31.png");
-  background-position: center;
+  background-position: 100% center;
   background-size: 90%;
   height: 30vw;
   display: flex;
@@ -469,10 +491,17 @@ h3 {
   justify-content: center;
 }
 
-.content {
+.content1 {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  flex-direction: row;
+}
+
+@media (max-width: 414px) {
+  .content1 {
+    flex-direction: column;
+    padding-top: 10rem;
+  }
 }
 
 .content__text {
@@ -500,8 +529,31 @@ h3 {
   color: #000;
 }
 
+.content__form {
+  display: flex;
+  justify-content: center;
+}
+
 .cover {
   padding-left: 60px;
+}
+
+@media (max-width: 1200px) {
+  .cover {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 414px) {
+  .cover {
+    padding-left: 0px;
+  }
 }
 
 p.contact {
