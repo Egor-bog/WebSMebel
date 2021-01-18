@@ -102,7 +102,6 @@ header {
   font-size: 2.4rem;
   text-decoration: none;
   color: #06070c;
-  width: 15rem;
   letter-spacing: 0.2rem;
 }
 
@@ -221,7 +220,6 @@ header {
   font-size: 16px;
   text-decoration: none;
   font-weight: 400;
-  margin-right: 25px;
   width: 80px;
   transition: .3s;
 }
@@ -438,7 +436,25 @@ h3 {
   background-image: url("../../img/about_us/диван Челси 3 ех местный прямой ткань Omega 37.jpg");
   background-position: bottom;
   background-size: 100%;
-  height: 40vw;
+  height: 65rem;
+}
+
+@media (max-width: 1200px) {
+  .first-img {
+    height: 52rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-img {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .first-img {
+    height: 27rem;
+  }
 }
 
 .first-content {
@@ -452,21 +468,166 @@ h3 {
 }
 
 .section3 {
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 .section3 .wrapper {
   background-color: #f6f6f6;
 }
 
+@media (max-width: 414px) {
+  .section3 .wrapper {
+    height: 35rem;
+  }
+}
+
 .wrapper-backgr-img {
   background-image: url("../../img/about_us/sofa-clip-art-31.png");
-  background-position: center;
+  background-position: 100% center;
   background-size: 90%;
   height: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content1 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+@media (max-width: 414px) {
+  .content1 {
+    flex-direction: column;
+    padding-top: 10rem;
+  }
+}
+
+.content__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text__sub {
+  font-family: 'Sf-pro-display';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.4rem;
+  font-size: 3.0rem;
+}
+
+.text__under {
+  font-family: Gordita,sans-serif;
+  font-size: 14px;
+  color: #747577;
+  line-height: 1.7;
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.content__form {
+  display: flex;
+  justify-content: center;
+}
+
+.cover {
+  padding-left: 60px;
+}
+
+@media (max-width: 1200px) {
+  .cover {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 414px) {
+  .cover {
+    padding-left: 0px;
+  }
+}
+
+p.contact {
+  font-family: Gordita,sans-serif;
+  font-size: 14px;
+  color: #747577;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: #4b4b4b;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+  margin-bottom: 0px;
+}
+
+input[type="text"] {
+  width: 40rem;
+}
+
+textarea {
+  width: 40rem;
+  height: 10rem;
+}
+
+label {
+  color: #1f1d1c;
+}
+
+input, textarea {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.3rem;
+  font-family: Keffeesatz, Arial;
+  color: #4b4b4b;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
+  border: 5px solid #ff5400;
+  background-color: white;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.8rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 36px 8px 36px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  background: -moz-linear-gradient(center bottom, #619702 23%, #7ac000 62%);
+}
+
+input[type="submit"]:hover {
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #ff5400;
+  background: -moz-linear-gradient(center bottom, #c34000 23%, #ff5400 62%);
+}
+
+input[type="submit"]:active {
+  top: 1px;
 }
 
 .map {
-  padding-top: 5rem;
+  padding-top: 1rem;
+  opacity: 0.7;
 }
 /*# sourceMappingURL=style.css.map */

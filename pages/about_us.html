@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="../src/style/base/reset.css">
         <link rel="stylesheet" href="../src/style/style.css">
         <title>Мягкая мебель</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/form.js"></script>
     </head>
 <body>
     <header class="header">
@@ -39,24 +41,24 @@
           </div>
         </div>
           <div class="social-links">
-            <a href="https://wa.me/375297548494" class="social-links__item" target="_blank" >
-              <img src="../img/icons/whatsapp.png" alt="WhatsApp">
-              <p>WhatsApp</p>
-            </a>
-            <a class="social-links__item" href="https://www.instagram.com/one_mebel/" target="_blank">
-              <img src="../img/icons/instagram.png" alt="Instagram">
-              <p>Instagram</p>     
-            </a>
-            <a class="social-links__item" href="https://www.youtube.com/channel/UCHxGaA37jkHHSGTr5Jg5EnA" target="_blank">
-              <img src="../img/icons/ikonkajutub.png" alt="YouTube">
-              <p>YouTube</p>
-            </a>
-            <a class="social-links__item social-links__phone" href="tel:+ 375 (29) 754-84-94">
-              <img src="../img/icons/ikonkazvonok.png">
-              <p>Телефон</p>
-              <div class="m--hover"><span>+ 375 (29) 754-84-94</span></div>
-            </a>
-          </div>
+        <a href="https://wa.me/375298512810" class="social-links__item" target="_blank" >
+          <img src="../img/icons/whatsapp.png" alt="WhatsApp">
+          <p>WhatsApp</p>
+        </a>
+        <a class="social-links__item" href="https://www.instagram.com/mariolli_group/" target="_blank">
+          <img src="../img/icons/instagram.png" alt="Instagram">
+          <p>Instagram</p>     
+        </a>
+        <a class="social-links__item" href="https://www.youtube.com/channel/UCHxGaA37jkHHSGTr5Jg5EnA" target="_blank">
+          <img src="../img/icons/ikonkajutub.png" alt="YouTube">
+          <p>YouTube</p>
+        </a>
+        <a class="social-links__item social-links__phone" href="tel:+ 375 (29) 851-28-10">
+          <img src="../img/icons/ikonkazvonok.png">
+          <p>Телефон</p>
+          <div class="m--hover"><span>+ 375 (29) 851-28-10</span></div>
+        </a>
+      </div>
       </header>
       <main>
         <div class="wrapper">
@@ -76,14 +78,30 @@
       <section class="section3">
         <div class="wrapper">
           <div class="wrapper-backgr-img">
-            <div class="content">
-              <div class="content__text"></div>
-              <div class="content__map">
-                <div class="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.255017381079!2d26.898103045089915!3d54.48543432687744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xba3fcb8ff90abdd5!2z0J7QkNCeINCX0LXQvdC40YIt0JHQtdC70J7QnNCe!5e0!3m2!1sru!2sby!4v1610788967823!5m2!1sru!2sby"
-                   width="300" height="250" frameborder="0" style="border:0;" 
-                   allowfullscreen="" aria-hidden="false" tabindex="0">
-                  </iframe>
+            <div class="content1">
+              <div class="content__text">
+                <div class="text__sub">
+                  Хотите интерьер мечты?
+                </div>
+                <div class="text__under">
+                  Свяжитесь с нами и мы превратим его в реальность?
+                </div>
+              </div>
+              <div class="content__form">
+                <div class="form">
+                  <div class="cover">
+                    <form id="contactform"> 
+                        <p class="contact"><label for="name">Имя</label></p> 
+                        <input id="name" name="name" placeholder="Ваше имя" required="" tabindex="1" type="text"> 
+                 
+                        <p class="contact"><label for="email">Email</label></p> 
+                        <input id="email" name="email" placeholder="example@sitehere.ru" required="" tabindex="2" type="text"> 
+                 
+                        <p class="contact"><label for="comment">Коментарий</label></p> 
+                        <textarea name="comment" id="comment" tabindex="4"></textarea> <br>
+                        <input name="submit" id="submit" tabindex="5" value="Отправить" type="submit"> 	 
+                    </form> 
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,6 +111,7 @@
       <footer>
         <div class="end"></div>
       </footer>
+      
     <script src="../src/index.js"></script>
 </body>
 </html>
