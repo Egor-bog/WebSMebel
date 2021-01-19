@@ -1,0 +1,43 @@
+.contacs-container {
+    width: 100%;
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-title {
+    text-align: center;
+}
+
+.title {
+    @include h2;
+}
+
+.container-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+    @include media-mobile {
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+.text__1 {
+    text-align: left;
+    @include media-mobile {
+    text-align: center; 
+    }
+}
+
+.text__1sp {
+    @include h3;
+
+}
+
+.text__1p {
+    @include text;
+}
