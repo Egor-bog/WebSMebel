@@ -14,6 +14,9 @@ jQuery(document).ready(function(){
         });
         $(this).find('input, textarea').prop('disabled', true);
         $(".popup__modal").addClass("active");
+        $(".map-conteiner").addClass("active");
         event.preventDefault();
     });
+
+
 });

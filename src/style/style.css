@@ -566,6 +566,7 @@ h3 {
 
 .second-bloc__2 img {
   width: 15rem;
+  height: 15rem;
 }
 
 .second-bloc__3 {
@@ -769,6 +770,7 @@ input[type="submit"]:active {
 @media (max-width: 414px) {
   .text__1 {
     text-align: center;
+    margin-top: 2rem;
   }
 }
 
@@ -786,5 +788,9 @@ input[type="submit"]:active {
   font-size: 14px;
   color: #747577;
   line-height: 1.7;
+}
+
+.map-conteiner__active {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

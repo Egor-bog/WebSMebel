@@ -30,14 +30,18 @@
     text-align: left;
     @include media-mobile {
     text-align: center; 
+    margin-top: 2rem;
     }
 }
 
 .text__1sp {
     @include h3;
-
 }
 
 .text__1p {
     @include text;
+}
+
+.map-conteiner__active{
+    display: none;
 }

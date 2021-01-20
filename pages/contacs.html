@@ -77,13 +77,13 @@
                     </div>
                     <div class="container-text">
                         <div class="text__1">
-                            <span class="text__1sp"> Телефон: </span>
+                            <span class="text__1sp">Телефон: </span>
                             <p class="text__1p">+375(29)851-28-10</p>  
-                            <span class="text__1sp"><br> e-mail: </span>
+                            <span class="text__1sp"> e-mail: </span>
                             <p class="text__1p">mariolligroup@mail.ru</p> 
                         </div>
                         <div class="text__1">
-                            <span class="text__1sp"> Адрес: </span>
+                            <span class="text__1sp">Адрес: </span>
                             <p class="text__1p">Республика Беларусь,<br>
                                 Минская область,<br>
                                 г. Вилейка<br>
@@ -134,6 +134,7 @@
             </section>
             <section class="section-map">
                 <div class="map-conteiner">
+                    
                     <script type="text/javascript" charset="utf-8"
                     async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A98885d8927e478b62e1702ed491a46b9afb0a48139d0528397fdc9829c7bc587&amp;
                     width=789&amp;height=316&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -141,9 +142,16 @@
             </section>
             <section class="end">
             </section>
+            <div class="popup__modal">
+                <div class="overlay"></div>
+                <div class="popup__thx__body">
+                  <span class="popup__thx__body_sp">Свасибо, сообщение отправлено!</span>
+                </div>
+              </div>
         </main>
         <script src="../src/index.js"></script>
         <script>
+          
             $(".overlay").click(function() {
               $(".popup__modal").removeClass("active");
             });
