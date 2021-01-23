@@ -1,0 +1,67 @@
+$linear-gradient: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, #a8eb12);
+
+$box-shadow: 
+    0 16px 24px 2px rgba(33,37,41,.02), 
+    0 6px 30px 5px rgba(33,37,41,.04), 
+    0 8px 10px -5px rgba(33,37,41,.1);
+
+$border-radius: 3px;    
+
+
+
+
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 4rem;
+    width: 80%;
+    max-width: 1200px;
+    margin: 9rem auto;
+}
+
+.products-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem 2rem;
+    background-color: #fff;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+   
+
+    &__name {
+        margin-bottom: auto;
+        @include h3;
+
+    }
+
+    &__img {    
+        width: 100%;
+        height: 27rem;
+        object-fit: contain;
+        margin-top: 1.5rem;
+
+    }
+
+    &__price {
+        margin-top: 1.5rem;
+        color: #808080;
+        @include text;
+    }
+
+    &__btn {
+        margin-top: 1.5rem;
+        padding: 1rem 1.5rem;
+        border: 1px solid #808080;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        @include text;
+    }
+
+    &__btn_active {
+        border: 1px solid transparent;
+        background-image: $linear-gradient;
+    }
+}
