@@ -65,3 +65,53 @@ $border-radius: 3px;
         background-image: $linear-gradient;
     }
 }
+
+.header-container {
+    width: 100%;
+    height: 5rem;
+    margin-top: 8rem;
+}
+.header-counter {
+    margin-left: auto;
+    width: 100%;
+    height: auto;
+    @include h2;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.shopping-container {
+    width: 97%;
+    height: 97vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 8rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow-y: hidden;
+}
+.shopping-element__name {
+    padding: 3rem;
+    @include h3;
+    color: rgb(17, 16, 16);
+}
+.shopping-element__price {
+    padding: 3rem;
+    @include h3;
+    color: rgb(17, 16, 16);
+}
+.shopping__close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    right: 20px;
+    background-image: url(/img/svg/close.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}

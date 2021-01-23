@@ -6,7 +6,6 @@ function burgerMenu(selector) {
     let links = menu.querySelector(".burger-menu__link");
     let overlay = menu.querySelector(".burger-menu__overlay");
     let mapConteiner = document.querySelector(".map-conteiner");
-console.log(mapConteiner);
     button.addEventListener("click", (e) => {
         e.preventDefault();
         toggleMenu();

@@ -249,6 +249,18 @@ header {
   opacity: 1;
 }
 
+.nav__basket__span {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  font-family: Gordita,sans-serif;
+  font-size: 14px;
+  color: #747577;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: black;
+}
+
 .main {
   background-color: #fff;
   padding-top: 7rem;
@@ -856,5 +868,71 @@ input[type="submit"]:active {
 .products-element__btn_active {
   border: 1px solid transparent;
   background-image: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, #a8eb12);
+}
+
+.header-container {
+  width: 100%;
+  height: 5rem;
+  margin-top: 8rem;
+}
+
+.header-counter {
+  margin-left: auto;
+  width: 100%;
+  height: auto;
+  font-family: 'Sf-pro-display';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.4rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shopping-container {
+  width: 97%;
+  height: 97vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  padding: 8rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow-y: hidden;
+}
+
+.shopping-element__name {
+  padding: 3rem;
+  font-family: 'Gordita', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #111010;
+}
+
+.shopping-element__price {
+  padding: 3rem;
+  font-family: 'Gordita', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #111010;
+}
+
+.shopping__close {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 20px;
+  right: 20px;
+  background-image: url(/img/svg/close.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
