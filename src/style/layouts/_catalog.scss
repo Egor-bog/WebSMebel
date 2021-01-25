@@ -82,36 +82,41 @@ $border-radius: 3px;
 
 
 .shopping-container {
-    width: 97%;
-    height: 97vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
     margin: auto;
-    padding: 8rem;
+    padding-top: 8rem;
     background-color: rgba(255, 255, 255, 0.7);
-    overflow-y: hidden;
 }
-.shopping-element__name {
+.shopping-element__name, .shopping-element__button {
     padding: 3rem;
     @include h3;
     color: rgb(17, 16, 16);
+    vertical-align: middle;
 }
 .shopping-element__price {
     padding: 3rem;
     @include h3;
     color: rgb(17, 16, 16);
+    vertical-align: middle;
 }
-.shopping__close {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 20px;
-    right: 20px;
-    background-image: url(/img/svg/close.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    cursor: pointer;
+.shopping-element__img {
+    width: 100%;
+    height: 27rem;
+    object-fit: contain;
+    margin-top: 1.5rem;
+    
 }
+
+.shopping-element__img-div {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shopping-element__img-div img {
+    height: 100%;
+    width: auto;
+  }

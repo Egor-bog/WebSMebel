@@ -17,6 +17,8 @@ class Products {
         }
 
         headerPage.render(products.length);
+        kolProducts.render(products.length);
+
     }
 
     render() {

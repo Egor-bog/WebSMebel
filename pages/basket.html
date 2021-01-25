@@ -8,9 +8,9 @@
         <title>Мягкая мебель</title>
         <link rel="icon" type="image/pmg" href="../img/icons/favicone.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="../js/form.js"></script>
+        <script src="../js/formBasket.js"></script>
     </head>
-  <body>
+  <body id = "basket">
     <header class="header">
         <div class="wrapper">
           <div class="wrapper_cont">
@@ -26,6 +26,7 @@
                 <nav class="burger-menu__nav">
                   <a href="../index.html" class="burger-menu__link">ГЛАВНАЯ</a>
                   <a href="./about_us.html" class="burger-menu__link">О НАС</a>
+                  <a href="./catalog.html" class="burger-menu__link">КАТАЛОГ</a>
                   <a href="#" class="burger-menu__link">ТКАНИ И АКСЕССУАРЫ</a>
                   <a href="#" class="burger-menu__link">ДОСТАВКА И ОПЛАТА</a>
                   <a href="./contacs.html" class="burger-menu__link">КОНТАКТЫ</a>
@@ -35,7 +36,7 @@
               <a href = "../index.html" class="nav__logo">
                 <h1>Mari Olli</h1>
               </a>
-              <a href = "./basket.html" class="nav__basket">
+              <a href = "#" class="nav__basket">
                 <img src="../img/icons/basket_96252.svg" alt="" class="nav__basket__img">
               </a>
             </div>
@@ -61,23 +62,60 @@
         </a>
       </div>
     </header>
-    <main>
-        <div class="" id="header"></div>
-        <div class="" id="products"></div>
+    <main class = "wrapper">
         <div class="" id="shopping"></div>
     </main>
+    <section class="section3">
+      <div class="wrapper">
+        <div class="wrapper-backgr-img">
+          <div class="content1">
+            <div class="content__text">
+              <div class="text__sub">
+                Хотите интерьер мечты?
+              </div>
+              <div class="text__under">
+                Свяжитесь с нами и мы превратим его в реальность?
+              </div>
+            </div>
+            <div class="content__form">
+              <div class="form">
+                <div class="cover">
+                  <form id="contactform"> 
+                      <p class="contact"><label for="name">Имя</label></p> 
+                      <input id="name" name="name" placeholder="Ваше имя" required="" tabindex="1" type="text"> 
+               
+                      <p class="contact"><label for="email">Email</label></p> 
+                      <input id="email" name="email" placeholder="example@sitehere.ru" required="" tabindex="2" type="text"> 
+               
+                      <p class="contact"><label for="comment">Коментарий</label></p> 
+                      <textarea name="comment" id="comment" tabindex="4"></textarea> <br>
+                      <input name="submit" id="submit" tabindex="5" value="Отправить" type="submit"> 	 
+                  </form> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="end"></div>
+    </footer>
+    <div class="popup__modal">
+      <div class="overlay"></div>
+      <div class="popup__thx__body">
+        <span class="popup__thx__body_sp">Свасибо, сообщение отправлено!</span>
+      </div>
+    </div>
 
-    <!-- Constatns and Utilits -->
-    <script src="../js/catalog/constant/catalog.js"></script>
-    <script src="../js/catalog/constant/root.js"></script>
+
     <script src="../js/catalog/Utils/localStorageUtil.js"></script>
-
-    <script src="../js/catalog/components/header.js"></script>
-
-    <script src="../js/catalog/components/products.js"></script>
-
-    <script src="../js/catalog/components/shopping.js"></script>
-
+    <script src="../js/catalog/constant/catalog.js"></script>
     <script src="../src/index.js"></script>
-  </body>
+    <script>
+      $(".overlay").click(function() {
+        $(".popup__modal").removeClass("active");
+      });
+    </script>
+</body>
 </html>
