@@ -251,13 +251,13 @@ header {
 
 .nav__basket__span {
   position: absolute;
-  top: 9px;
-  left: 7px;
+  top: 1px;
+  left: -12px;
   font-family: Gordita,sans-serif;
   font-size: 14px;
   color: #747577;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: 2rem;
   color: black;
 }
 
@@ -892,7 +892,7 @@ input[type="submit"]:active {
   max-width: 100%;
   height: auto;
   margin: auto;
-  padding-top: 8rem;
+  padding-top: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -939,5 +939,42 @@ input[type="submit"]:active {
 .shopping-element__img-div img {
   height: 100%;
   width: auto;
+}
+
+.section-basket {
+  padding-top: 8rem;
+}
+
+.shopping-element__button-div {
+  position: relative;
+  display: flex;
+}
+
+p {
+  margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  tr {
+    width: 716px;
+  }
+  .shopping-element__img-tab {
+    float: left;
+  }
+  .shopping-element__name {
+    width: 300px;
+    float: left;
+  }
+  .shopping-element__button {
+    float: left;
+  }
+}
+
+@media (max-width: 414px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

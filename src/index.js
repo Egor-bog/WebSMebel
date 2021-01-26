@@ -86,6 +86,7 @@ if (document.querySelector('body#basket')) {
     
         render() {
             const productsStore = localStorageUtil.getProducts();
+            let inputCat = '';
             let htmlCatalog = '';
             let sumCatalog = 0;
 
@@ -93,6 +94,10 @@ if (document.querySelector('body#basket')) {
     
             CATALOG.forEach(({ id, name, price, img }) => {
                 if (productsStore.indexOf(id) !== -1) {
+                    inputCat +=`
+                     <input type="hidden" name="productF" value="${name}">
+                     <input type="hidden" name="kolF" value="${cartBasket[id]}">
+                     `
                     htmlCatalog += `
                         <tr>
                             <td class="shopping-element__img-tab">
@@ -102,23 +107,27 @@ if (document.querySelector('body#basket')) {
                             </td>
                             <td class="shopping-element__name"> ${name}</td>
                             <td class="shopping-element__button">
-                            <button class="minus" data-id="${id}">-</button>
-                            ${cartBasket[id]}
-                            <button class="plus" data-id="${id}">+</button>
+                                <div class="shopping-element__button-div">
+                                    <button class="minus" data-id="${id}">-</button>
+                                    <p> ${cartBasket[id]} </p>
+                                    <button class="plus" data-id="${id}">+</button>
+                                </div>    
                             </td>
                             <td class="shopping-element__price">${price.toLocaleString()} USD</td>
+                            <td class="shopping-element__price">${(price*cartBasket[id]).toLocaleString()} USD</td>
                         </tr>
                     `;
-                   // sumCatalog += price;
+                   sumCatalog += price;
                 }
             });
     
             const html = `
                 <div class="shopping-container">
+                   
                     <table>
                         ${htmlCatalog}
                         <tr>
-                            <td class="shopping-element__name">💥 Сумма:</td>
+                            <td class="shopping-element__name">Сумма:</td>
                             <td class="shopping-element__price">${sumCatalog.toLocaleString()} USD</td>
                         </tr>
                     </table>

@@ -4,6 +4,10 @@ console.log(form_data);
 $name = $_POST['name'];// Берём данные из input c атрибутом name="name"
 $email = $_POST['email']; // Берём данные из input c атрибутом name="mail"
 $comment = $_POST['comment']; // Берём данные из input c атрибутом name="phone"
+$city = $_POST['city'];
+$productF = $_POST['productF'];
+$kolF = $_POST['kolF'];
+
 console.log($name);
 $token = "1503250586:AAFh8LxuCs32Aj65DOMVpNLYknTKub4aaqg"; // Тут пишем токен
 $chat_id = "1229323655"; // Тут пишем ID группы, куда будут отправляться сообщения
@@ -14,6 +18,8 @@ $arr = array(
   'Заказ с сайта: ' => $sitename,
   'Имя: ' => $name,
   'Почта' => $email,
+  'Город' => $city,
+  ''
   'Коментарий: ' => $comment
   
 );

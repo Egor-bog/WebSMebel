@@ -1,0 +1,39 @@
+.section-basket {
+    padding-top: 8rem;
+}
+
+ .shopping-element__button-div {
+     position: relative;
+     display: flex;
+
+ }
+p {
+    margin: 0 1rem;
+}
+
+
+@include media-tablet {
+
+tr {
+    width: 716px;
+}
+.shopping-element__img-tab {
+    float: left;
+}
+.shopping-element__name {
+    width: 300px;
+    float: left;
+}
+ .shopping-element__button {
+    float: left;
+}
+}
+
+@include media-mobile {
+    tr {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+}
+
