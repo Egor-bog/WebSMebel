@@ -19,10 +19,15 @@ function burgerMenu(selector) {
         menu.classList.toggle("burger-menu__active");
         if (menu.classList.contains("burger-menu__active")) {
             document.body.style.overflow = "hidden";
-            mapConteiner.classList.add("map-conteiner__active");
+            if (document.querySelector('body#contacts')) {
+              mapConteiner.classList.add("map-conteiner__active");  
+            }
+            
         } else {
             document.body.style.overflow = "visible";
+            if (document.querySelector('body#contacts')) {
             mapConteiner.classList.remove("map-conteiner__active");
+            }
         }
     }
 
@@ -36,7 +41,7 @@ class KOLPRODUCTS {
     
     render (count) {
         var navBasket = document.querySelector(".nav__basket");
-    navBasket.onclick= function() {href = "./basket.html";};
+    //navBasket.onclick= function() {href = "./basket.html";};
     navBasket.style.position = "relative";
     navBasket.style.display = "inline-block";
     
@@ -63,7 +68,9 @@ kolProducts.render(localStorageUtil.getProducts().length);
 
 // Страница Корзина
 if (document.querySelector('body#basket')) {
-        let cart = localStorageUtil.getProducts();
+    let cart = localStorageUtil.getProducts();
+    
+
     function basketObj(cart) {
         
         var basketO = {};
@@ -86,18 +93,15 @@ if (document.querySelector('body#basket')) {
     
         render() {
             const productsStore = localStorageUtil.getProducts();
-            let inputCat = '';
             let htmlCatalog = '';
             let sumCatalog = 0;
+            let stringProducts = "";
 
 
     
             CATALOG.forEach(({ id, name, price, img }) => {
                 if (productsStore.indexOf(id) !== -1) {
-                    inputCat +=`
-                     <input type="hidden" name="productF" value="${name}">
-                     <input type="hidden" name="kolF" value="${cartBasket[id]}">
-                     `
+                    stringProducts += "Товар:" + name + "  кол-во:" +cartBasket[id] + ".\n" 
                     htmlCatalog += `
                         <tr>
                             <td class="shopping-element__img-tab">
@@ -123,7 +127,6 @@ if (document.querySelector('body#basket')) {
     
             const html = `
                 <div class="shopping-container">
-                   
                     <table>
                         ${htmlCatalog}
                         <tr>
@@ -134,6 +137,14 @@ if (document.querySelector('body#basket')) {
                 </div>
             `;
             ROOT_SHOPPING.innerHTML = html;
+             var strBasket = document.querySelector("#contactform");
+             
+                 var eleminp = document.createElement("input");
+                 eleminp.setAttribute('type','hidden');
+                 eleminp.setAttribute('name','comment');
+                 eleminp.setAttribute('value',`${stringProducts}`);
+                 strBasket.appendChild(eleminp);
+                 
         }
     }
     

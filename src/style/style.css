@@ -252,7 +252,7 @@ header {
 .nav__basket__span {
   position: absolute;
   top: 1px;
-  left: -12px;
+  left: -2rem;
   font-family: Gordita,sans-serif;
   font-size: 14px;
   color: #747577;
@@ -558,8 +558,9 @@ h3 {
 }
 
 .second-bloc {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  grid-gap: 10px 10px;
 }
 
 @media (max-width: 414px) {
