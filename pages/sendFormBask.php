@@ -1,5 +1,4 @@
 <?php
-console.log(form_data);
 //Сбор данных из полей формы. 
 $name = $_POST['name'];// Берём данные из input c атрибутом name="name"
 $email = $_POST['email']; // Берём данные из input c атрибутом name="mail"

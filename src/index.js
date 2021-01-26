@@ -67,6 +67,7 @@ kolProducts.render(localStorageUtil.getProducts().length);
 //-----
 
 // Страница Корзина
+
 if (document.querySelector('body#basket')) {
     let cart = localStorageUtil.getProducts();
     
@@ -86,6 +87,8 @@ if (document.querySelector('body#basket')) {
 
     const ROOT_SHOPPING = document.getElementById('shopping');
     let kol = 1;
+
+
     class Shopping {
         handleClear() {
             ROOT_SHOPPING.innerHTML = '';
@@ -177,21 +180,32 @@ if (document.querySelector('body#basket')) {
         shoppingPage.render();
     }
 
+ }  
 
+
+// Модалка в каталоге
+if (document.querySelector('body#catalog')) {
+
+    let idProduct;
+
+    var popup = document.getElementById("popup__basket");
+    var overlay = document.getElementById("overlay-basket");
+    var span = document.getElementsByClassName("popup__close");    
+
+    document.onclick = event => {
+        if(event.target.classList.contains('products-element__img') || event.target.classList.contains('products-element__name')) {
+            popup.style.display = "block";
+            idProduct = event.target.dataset.id;
+        }  
+    }    
+        
+    span.onclick = function () {
+        popup.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == overlay) {
+            popup.style.display = "none";
+        }
+    }  
 }
-
-
-/*
-.map(
-    n => `
-  <button class="delete" data-art="${n}" >x</button>
-    <img src="${n.image}" width="48">
-    ${n.name}
-    <button class="minus" data-art="${n}">-</button>
-    ${n}
-    <button class="plus" data-art="${n}">+</button>
-    ${n}*${n.cost}
-`
-  )
-
-  */

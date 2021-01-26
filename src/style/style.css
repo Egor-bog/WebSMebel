@@ -810,7 +810,7 @@ input[type="submit"]:active {
 
 .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 4rem;
   width: 80%;
   max-width: 1200px;
@@ -835,6 +835,7 @@ input[type="submit"]:active {
   font-size: 1.8rem;
   line-height: 24px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .products-element__img {
@@ -842,6 +843,7 @@ input[type="submit"]:active {
   height: 27rem;
   object-fit: contain;
   margin-top: 1.5rem;
+  cursor: pointer;
 }
 
 .products-element__price {
@@ -928,9 +930,13 @@ input[type="submit"]:active {
   margin-top: 1.5rem;
 }
 
+.shopping-element__img-tab {
+  vertical-align: middle;
+}
+
 .shopping-element__img-div {
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 12rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -938,8 +944,46 @@ input[type="submit"]:active {
 }
 
 .shopping-element__img-div img {
+  height: 12rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.popup-catalog {
+  position: fixed;
+  width: 100%;
   height: 100%;
-  width: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup-catalog__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.popup-catalog__body-content {
+  background-color: #fff;
+  color: black;
+  width: 90%;
+  height: 90%;
+  padding: 3rem;
+  position: relative;
+}
+
+.popup__close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  font-size: 2.5rem;
+  color: #000;
+  text-decoration: none;
 }
 
 .section-basket {

@@ -2,7 +2,7 @@
     padding-top: 8rem;
 }
 
- .shopping-element__button-div {
+.shopping-element__button-div {
      position: relative;
      display: flex;
 
@@ -11,9 +11,7 @@ p {
     margin: 0 1rem;
 }
 
-
 @include media-tablet {
-
 tr {
     width: 716px;
 }

@@ -1,21 +1,32 @@
 const CATALOG = [
     {
         "id": "el1",
-        "name": "FENDER SQUIER BULLET STRAT HT HSS BLK",
-        "img": "https://i.ibb.co/QJfqs4K/1.jpg",
-        "price": 13600
+        "name": "Диван Челси, Д1",
+        "img": "../img/catalog/Челси 1.jpg", 
+        "price": 0,
+        "size": "Размер: 226 82 110см ",
+        "about": {
+            discrip: {
+                header: "Заголовок",
+                about: "описание",
+            },
+            specification: {
+                width: "1000-",
+                height: "mmmmv"
+            }
+        }
     },
     {
         "id": "el2",
-        "name": "FENDER SQUIER AFFINITY",
-        "img": "https://i.ibb.co/pKrG5ZJ/2.jpg",
-        "price": 23900
+        "name": "Диван челси с оттоманкой, Д4",
+        "img": "../img/catalog/Челси с оттоманкой Д4.png",
+        "price": 0
     },
     {
         "id": "el3",
-        "name": "IBANEZ GIO GRG121DX-BKF BLACK FLAT",
-        "img": "https://i.ibb.co/NnvcYhR/3.jpg",
-        "price": 21600
+        "name": "Диван челси с оттоманкой, Д5",
+        "img": "../img/catalog/Челси с от Д5.png", 
+        "price": 0
     },
     {
         "id": "el4",
