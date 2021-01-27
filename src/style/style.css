@@ -1142,4 +1142,87 @@ p {
     width: auto;
   }
 }
+
+.first-img-t {
+  background-image: url("../../img/ткань.JPG");
+  background-position: bottom;
+  background-size: 100%;
+  height: 65rem;
+}
+
+@media (max-width: 1200px) {
+  .first-img-t {
+    height: 52rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-img-t {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .first-img-t {
+    height: 27rem;
+  }
+}
+
+a.blubtn {
+  width: 20rem;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 24px;
+  border: #1071FF 1px solid;
+  color: #1071FF;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 20px auto;
+  transition: .5s;
+  border-radius: 0px;
+}
+
+a.blubtn:hover {
+  top: 5px;
+  transition: .5s;
+  color: #ff1010;
+  border: #ff3410 1px solid;
+  border-radius: 10px;
+}
+
+a.blubtn:active {
+  color: #000;
+  border: #1A1A1A 1px solid;
+  transition: .07s;
+  background-color: #FFF;
+}
+
+.first-img-p {
+  background-image: url("../../img/доставка.png");
+  background-position: bottom;
+  background-size: 100%;
+  height: 65rem;
+}
+
+@media (max-width: 1200px) {
+  .first-img-p {
+    height: 52rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-img-p {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .first-img-p {
+    height: 27rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

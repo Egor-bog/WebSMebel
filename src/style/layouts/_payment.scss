@@ -1,0 +1,16 @@
+.first-img-p {
+    background-image: url('../../img/доставка.png');
+    background-position: bottom;
+    background-size: 100%;
+    height: 65rem;
+    @include media-laptop {
+        height: 52rem;
+    }
+    @include media-tablet {
+        height: 30rem;
+    }
+    @include media-mobile {
+        height: 27rem;
+    }
+
+}
