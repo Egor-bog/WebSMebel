@@ -38,8 +38,8 @@ class Products {
 
             htmlCatalog += `
                 <li class="products-element">
-                    <span class="products-element__name">${name}</span>
-                    <img class="products-element__img" src="${img}" />
+                    <span id="${id}" class="products-element__name">${name}</span>
+                    <img id="${id}" class="products-element__img" src="${img}" />
                     <span class="products-element__price">
                         ⚡️ ${price.toLocaleString()} USD
                     </span>

@@ -28,7 +28,7 @@ const CATALOG = [
         "img": "../img/catalog/Челси с от Д5.png", 
         "price": 0
     },
-    {
+    /*{
         "id": "el4",
         "name": "EPIPHONE LES PAUL STUDIO LT EBONY",
         "img": "https://i.ibb.co/4Tg91WL/4.jpg",
@@ -69,5 +69,5 @@ const CATALOG = [
         "name": "YAMAHA PACIFICA 012 WH",
         "img": "https://i.ibb.co/30qJcZX/10.jpg",
         "price": 15990
-    }
+    }*/
 ]

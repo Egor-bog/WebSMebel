@@ -109,7 +109,7 @@ if (document.querySelector('body#basket')) {
                         <tr>
                             <td class="shopping-element__img-tab">
                                 <div class="shopping-element__img-div" >
-                                    <img src="${img}">
+                                    <img  src="${img}">
                                 </div>
                             </td>
                             <td class="shopping-element__name"> ${name}</td>
@@ -186,26 +186,93 @@ if (document.querySelector('body#basket')) {
 // Модалка в каталоге
 if (document.querySelector('body#catalog')) {
 
-    let idProduct;
+    const ROOT_popup = document.getElementById('popupS');
 
-    var popup = document.getElementById("popup__basket");
-    var overlay = document.getElementById("overlay-basket");
-    var span = document.getElementsByClassName("popup__close");    
+    class POPUP {
 
-    document.onclick = event => {
-        if(event.target.classList.contains('products-element__img') || event.target.classList.contains('products-element__name')) {
-            popup.style.display = "block";
-            idProduct = event.target.dataset.id;
-        }  
-    }    
-        
-    span.onclick = function () {
-        popup.style.display = "none";
-    }
+        render (idProduct) {
+            let htmlPopup = '';
 
-    window.onclick = function (event) {
-        if (event.target == overlay) {
-            popup.style.display = "none";
+             CATALOG.forEach(({ id, name, price, img }) => {
+                 if (idProduct.indexOf(id) !== -1) {
+
+                    htmlPopup += `
+                         <div class="popup-name">${name}
+                         </div>
+                         <div class="popup-img">
+                            <img class="popup-img__img" src="${img}">
+                         </div>
+                         <div class="popup-price">${price.toLocaleString()} USD 
+                         </div>
+                     `;
+                 };
+             });
+
+             ROOT_popup.innerHTML = htmlPopup; 
         }
-    }  
+
+
+    }
+    const popupPage = new POPUP();
+
+
+
+
+
+
+
+
+     
+     function popupOpen () {
+         
+        let idProduct = '';
+        const body = document.querySelector('body');
+        var popup = document.querySelector(".popup-catalog");
+        var popupBtn1 = document.querySelectorAll(".products-element__img");
+        var popupBtn2 = document.querySelectorAll(".products-element__name");
+        var overlay = document.querySelector(".popup-catalog__body");
+        var close = document.querySelector(".popup__close");  
+        console.log(popup)
+    
+        let unlock = true;
+        const timeout = 800;
+
+        for (let i = 0; i < popupBtn1.length; i++) {
+            popupBtn1[i].onclick = (e) => {
+                popup.classList.add('open');
+                idProduct = e.target.id;
+                popupPage.render(idProduct);
+            }    
+        }
+        
+        for (let i = 0; i < popupBtn2.length; i++) {
+            popupBtn2[i].onclick = (e) => {
+                popup.classList.add('open');
+                idProduct = e.target.id;
+                popupPage.render(idProduct);
+            }    
+        }
+
+        close.onclick = function () {
+            popupClose();
+        }   
+        
+        
+        overlay.onclick = function (elem) {
+            if(elem.target.classList.contains('popup-catalog__body')) {
+            popupClose();
+            }
+        }
+        
+        function popupClose() {
+            popup.classList.remove('open');
+        };
+      
+    } 
+
+    popupOpen();
+
+
+    
+
 }

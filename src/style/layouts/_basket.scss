@@ -5,8 +5,14 @@
 .shopping-element__button-div {
      position: relative;
      display: flex;
-
  }
+
+ .shopping-element__button-div button{
+     display: contents;
+     font-size: 2.2rem;
+ }
+
+
 p {
     margin: 0 1rem;
 }

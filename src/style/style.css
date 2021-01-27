@@ -958,6 +958,19 @@ input[type="submit"]:active {
   left: 0;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.popup-catalog.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup-catalog__body-content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
 }
 
 .popup-catalog__body {
@@ -966,6 +979,7 @@ input[type="submit"]:active {
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
+  z-index: 100;
 }
 
 .popup-catalog__body-content {
@@ -975,6 +989,7 @@ input[type="submit"]:active {
   height: 90%;
   padding: 3rem;
   position: relative;
+  z-index: 200;
 }
 
 .popup__close {
@@ -986,6 +1001,42 @@ input[type="submit"]:active {
   text-decoration: none;
 }
 
+/*Модальное окно*/
+#popupS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-name {
+  font-family: 'Sf-pro-display';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.4rem;
+}
+
+.popup-img {
+  padding: 2rem;
+  width: 90rem;
+  height: 60rem;
+  @inclu media-table;
+}
+
+.popup-img__img {
+  width: 100%;
+  height: auto;
+}
+
+.popup-price {
+  font-family: 'Gordita', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
 .section-basket {
   padding-top: 8rem;
 }
@@ -993,6 +1044,11 @@ input[type="submit"]:active {
 .shopping-element__button-div {
   position: relative;
   display: flex;
+}
+
+.shopping-element__button-div button {
+  display: contents;
+  font-size: 2.2rem;
 }
 
 p {

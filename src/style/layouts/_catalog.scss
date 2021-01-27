@@ -18,6 +18,10 @@ $border-radius: 3px;
     width: 80%;
     max-width: 1200px;
     margin: 9rem auto;
+    @include media-mobile {
+        width: 100%;
+    }
+    
 }
 
 .products-element {
@@ -138,6 +142,19 @@ $border-radius: 3px;
       left: 0;
       opacity: 0;
       visibility: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: all 0.8s ease 0s;
+  }
+
+  .popup-catalog.open {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  .popup.open .popup-catalog__body-content {
+      transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+      opacity: 1;
   }
 
   .popup-catalog__body {
@@ -146,6 +163,7 @@ $border-radius: 3px;
       align-items: center;
       justify-content: center;
       padding: 3rem 1rem;
+      z-index: 100;
   }
 
   .popup-catalog__body-content {
@@ -155,6 +173,8 @@ $border-radius: 3px;
       height: 90%;
       padding: 3rem;  
     position: relative;
+    z-index: 200;
+    
   }
 
   .popup__close {
@@ -165,3 +185,40 @@ $border-radius: 3px;
     color: #000;
     text-decoration: none;
   }
+
+  /*Модальное окно*/
+
+#popupS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-name {
+    @include h2;
+}
+
+.popup-img {
+
+    padding: 2rem;
+    width: 90rem;
+    height: 60rem;
+    @include media-table {
+        padding: 1rem;
+        width: 60rem;
+        height: 20rem;
+    }
+
+    @include media-mobile {
+        padding: 0 0px;
+    }
+}
+.popup-img__img {
+    width: 100%;
+    height: auto;
+}
+
+.popup-price {
+    @include h3;
+}
