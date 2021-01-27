@@ -106,23 +106,25 @@ if (document.querySelector('body#basket')) {
                 if (productsStore.indexOf(id) !== -1) {
                     stringProducts += "Товар:" + name + "  кол-во:" +cartBasket[id] + ".\n" 
                     htmlCatalog += `
-                        <tr>
-                            <td class="shopping-element__img-tab">
+                        <ul class="shop-ul">
+                            <li class="shopping-element__img-tab">
                                 <div class="shopping-element__img-div" >
                                     <img  src="${img}">
                                 </div>
-                            </td>
-                            <td class="shopping-element__name"> ${name}</td>
-                            <td class="shopping-element__button">
+                                <div class="shopping-element__name"> ${name}</div>
+                            </li>
+                            
+                            <li class="shopping-element__button">
                                 <div class="shopping-element__button-div">
                                     <button class="minus" data-id="${id}">-</button>
                                     <p> ${cartBasket[id]} </p>
                                     <button class="plus" data-id="${id}">+</button>
-                                </div>    
-                            </td>
-                            <td class="shopping-element__price">${price.toLocaleString()} USD</td>
-                            <td class="shopping-element__price">${(price*cartBasket[id]).toLocaleString()} USD</td>
-                        </tr>
+                                </div>  
+                             <div class="shopping-element__price">${price.toLocaleString()} USD</div>
+                            <div class="shopping-element__price">${(price*cartBasket[id]).toLocaleString()} USD</div>     
+                            </li>
+                        </ul>    
+                        
                     `;
                    sumCatalog += price;
                 }
@@ -130,8 +132,9 @@ if (document.querySelector('body#basket')) {
     
             const html = `
                 <div class="shopping-container">
+                    ${htmlCatalog}
                     <table>
-                        ${htmlCatalog}
+                        
                         <tr>
                             <td class="shopping-element__name">Сумма:</td>
                             <td class="shopping-element__price">${sumCatalog.toLocaleString()} USD</td>

@@ -93,13 +93,38 @@ $border-radius: 3px;
     margin: auto;
     padding-top: 1rem;
     background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
 }
-.shopping-element__name, .shopping-element__button {
+
+.shop-ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    @include media-tablet {
+        flex-direction: column;
+    }
+}
+
+.shopping-element__name {
+    padding: 3rem;
+    @include h3;
+    color: rgb(17, 16, 16);
+    vertical-align: middle;
+    flex-grow : 1;
+}
+
+.shopping-element__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     padding: 3rem;
     @include h3;
     color: rgb(17, 16, 16);
     vertical-align: middle;
 }
+
 .shopping-element__price {
     padding: 3rem;
     @include h3;
@@ -115,7 +140,16 @@ $border-radius: 3px;
 }
 
 .shopping-element__img-tab {
-    vertical-align: middle;
+    min-width:  60rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include media-tablet {
+       min-width:  30rem;
+    }
+    @include media-mobile {
+        flex-direction: column;
+    }
 }
 
 .shopping-element__img-div {
@@ -127,6 +161,7 @@ $border-radius: 3px;
     align-items: center;
   }
   .shopping-element__img-div img {
+      padding: 2px;
     height: 12rem;
     width: 100%;
     object-fit: contain;
@@ -204,13 +239,15 @@ $border-radius: 3px;
     padding: 2rem;
     width: 90rem;
     height: 60rem;
-    @include media-table {
+    display: table;
+    @include media-tablet {
         padding: 1rem;
         width: 60rem;
         height: 20rem;
     }
 
     @include media-mobile {
+        width: 35rem;
         padding: 0 0px;
     }
 }
