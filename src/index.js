@@ -198,7 +198,6 @@ if (document.querySelector('body#catalog')) {
 
              CATALOG.forEach(({ id, name, price, img }) => {
                  if (idProduct.indexOf(id) !== -1) {
-
                     htmlPopup += `
                          <div class="popup-name">${name}
                          </div>
@@ -207,9 +206,11 @@ if (document.querySelector('body#catalog')) {
                          </div>
                          <div class="popup-price">${price.toLocaleString()} USD 
                          </div>
+                         
+                         
                      `;
                  };
-             });
+             });   
 
              ROOT_popup.innerHTML = htmlPopup; 
         }

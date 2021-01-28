@@ -4,14 +4,16 @@ const CATALOG = [
         "name": "Диван Челси, Д1",
         "img": "../img/catalog/Челси 1.jpg", 
         "price": 10000,
-        "size": "Размер: 226 82 110см ",
         "about": {
+            размер: {
+                размер:"Размер: 226 82 110см ",
+            },
             discrip: {
                 header: "Заголовок",
                 about: "описание",
             },
             specification: {
-                width: "1000-",
+                width: "1000-", 
                 height: "mmmmv"
             }
         }
