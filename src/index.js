@@ -70,7 +70,8 @@ kolProducts.render(localStorageUtil.getProducts().length);
 
 if (document.querySelector('body#basket')) {
     let cart = localStorageUtil.getProducts();
-    
+
+  
 
     function basketObj(cart) {
         
@@ -189,6 +190,10 @@ if (document.querySelector('body#basket')) {
 // Модалка в каталоге
 if (document.querySelector('body#catalog')) {
 
+    
+
+
+
     const ROOT_popup = document.getElementById('popupS');
 
     class POPUP {
@@ -196,21 +201,68 @@ if (document.querySelector('body#catalog')) {
         render (idProduct) {
             let htmlPopup = '';
 
-             CATALOG.forEach(({ id, name, price, img }) => {
+             CATALOG.forEach(({ id, name, price, img, about, category }) => {
+                 
                  if (idProduct.indexOf(id) !== -1) {
                     htmlPopup += `
                          <div class="popup-name">${name}
                          </div>
-                         <div class="popup-img">
-                            <img class="popup-img__img" src="${img}">
+                         <div class="first-content">
+                            <div class="popup-img">
+                                <img class="popup-img__img" src="${img}">
+                            </div>
+                            <div class="first-content-txt">
+                                <p class="first-content-txt-content">
+                                    <b>Коллекция:</b>
+                                    <span>${about.коллекция}</span>
+                                </p>    
+                                <p class="first-content-txt-content">
+                                    <b>Механизм:</b>
+                                    <span>${about.механизм}</span>
+                                </p> 
+                                <p class="first-content-txt-content">
+                                    <b>Размер:</b>
+                                    <span>
+                                    <i class="icon-arrows-d"></i>
+                                    ${about.размер.дл}
+                                    <i class="icon-arrows-h"></i>
+                                    ${about.размер.выс}
+                                    <i class="icon-expand"></i>
+                                    ${about.размер.глуб} 
+                                    </span>
+                                </p>
+                                <p class="first-content-txt-content">
+                                    <b>Размер спального места:</b>
+                                    <span>${about.Размерспм}</span>
+                                </p> 
+                            </div>
                          </div>
                          <div class="popup-price">${price.toLocaleString()} USD 
                          </div>
+                         <div class="Second-content">
+                            <p class="Second-content-txt">
+                                <b><br></b>
+                                <span>${about.информация}</span>
+                            </p> <br>
+                                <p class="Second-content-txt">
+                                <b>${about.характеристики.заголовок}</b>
+                                <span>${about.характеристики.контент}</span>
+                            </p><br>
+                            <p class="Second-content-txt">
+                                <b>${about.омеханизме.заголовок}</b>
+                                <span>${about.омеханизме.контент}</span>
+                            </p><br>
+                            <p class="Second-content-txt">
+                                <b>${about.материалы.заголовок}</b>
+                                <span>${about.материалы.контент}</span>
+                            </p>
+                         </div> 
                          
                          
-                     `;
-                 };
-             });   
+                         
+                    `;
+                };
+            });   
 
              ROOT_popup.innerHTML = htmlPopup; 
         }
@@ -220,23 +272,17 @@ if (document.querySelector('body#catalog')) {
     const popupPage = new POPUP();
 
 
-
-
-
-
-
-
      
-     function popupOpen () {
-         
-        let idProduct = '';
+    
+         let idProduct = '';
+        
         const body = document.querySelector('body');
         var popup = document.querySelector(".popup-catalog");
         var popupBtn1 = document.querySelectorAll(".products-element__img");
         var popupBtn2 = document.querySelectorAll(".products-element__name");
         var overlay = document.querySelector(".popup-catalog__body");
         var close = document.querySelector(".popup__close");  
-        console.log(popup)
+        
     
         let unlock = true;
         const timeout = 800;
@@ -244,6 +290,7 @@ if (document.querySelector('body#catalog')) {
         for (let i = 0; i < popupBtn1.length; i++) {
             popupBtn1[i].onclick = (e) => {
                 popup.classList.add('open');
+                body.style.overflow = "hidden";
                 idProduct = e.target.id;
                 popupPage.render(idProduct);
             }    
@@ -252,11 +299,11 @@ if (document.querySelector('body#catalog')) {
         for (let i = 0; i < popupBtn2.length; i++) {
             popupBtn2[i].onclick = (e) => {
                 popup.classList.add('open');
+                body.style.overflow = "hidden";
                 idProduct = e.target.id;
                 popupPage.render(idProduct);
             }    
         }
-
         close.onclick = function () {
             popupClose();
         }   
@@ -270,13 +317,7 @@ if (document.querySelector('body#catalog')) {
         
         function popupClose() {
             popup.classList.remove('open');
+            body.style.overflow = "";
         };
       
-    } 
-
-    popupOpen();
-
-
-    
-
-}
+} 

@@ -198,7 +198,6 @@ $border-radius: 3px;
       align-items: center;
       justify-content: center;
       padding: 0rem 1rem 7rem;
-      z-index: 100;
   }
 
   .popup-catalog__body-content {
@@ -209,8 +208,11 @@ $border-radius: 3px;
       height: 90%;
       padding: 3rem;  
     position: relative;
-    z-index: 200;
-    
+    @include media-mobile {
+        width: 90vw;
+        padding: 2rem 1rem;
+    }
+    padding: 2rem 1rem;
   }
 
   .popup__close {
@@ -226,6 +228,8 @@ $border-radius: 3px;
 
 #popupS {
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -235,28 +239,88 @@ $border-radius: 3px;
     @include h2;
 }
 
+.first-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50rem;
+    @include media-tablet {
+        display: block;
+        min-height: 50rem;
+    }
+    @include media-mobile {
+        min-height: 40rem;
+    }
+}
+
+
+
+.first-content-txt-content{
+    @include h3;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.first-content-txt-content span{
+    @include a;
+    text-transform: none;
+    font-size: 1.5rem;
+}   
+
+.Second-content{
+    overflow-y: auto;
+}
+
+.Second-content-txt{
+    @include text;
+    font-weight: 600;
+}
+
+.Second-content-txt span{
+    font-weight: 400;
+}
+
 .popup-img {
     display: flex;
-    justify-content: center;
+    overflow: hidden;
     padding: 2rem;
-    width: 90rem;
-    height: 60rem;
+    width: 75rem;
+    height: 50rem;
     @include media-tablet {
-        padding: 1rem;
-        width: 60rem;
-        height: 20rem;
+        width: 52rem;
+        height: 35rem;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0rem;
     }
 
     @include media-mobile {
-        width: 35rem;
-        padding: 0 0px;
+        max-height: 27rem;
+        width: 100%;
+        padding: 0rem;
     }
 }
 .popup-img__img {
+    margin: 0 auto;
     width: auto;
     height: 100%;
 }
 
 .popup-price {
     @include h3;
+    padding-top: 1rem;
 }
+
+
+
+.icon-arrows-d:before {
+    content: "\f07e";
+  }
+.icon-arrows-h:before {
+    content: "\f07d";
+  }
+  .icon-expand:before {
+    content: "\f065";
+  }
+
+  

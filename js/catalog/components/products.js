@@ -25,7 +25,29 @@ class Products {
         const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = '';
 
-        CATALOG.forEach(({ id, name, price, img }) => {
+        var params = window
+    .location
+    .search
+    .replace('?','')
+    .split('&')
+    .reduce(
+        function(p,e){
+            var a = e.split('=');
+            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+            return p;
+        },
+        {}
+    );
+
+        let results = [];
+        if(params['data'] != undefined) {
+            results = CATALOG.filter(item => item.category == params['data']);
+        } else {
+            results = CATALOG;
+        }
+
+        results.forEach(({ id, name, price, img, category }) => {
+
             let activeClass = '';
             let activeText = '';
 
