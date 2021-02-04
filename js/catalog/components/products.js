@@ -1,4 +1,5 @@
 class Products {
+    
     constructor() {
         this.classNameActive = 'products-element__btn_active';
         this.labelAdd = 'Добавить в корзину';
@@ -38,7 +39,6 @@ class Products {
         },
         {}
     );
-
         let results = [];
         if(params['data'] != undefined) {
             results = CATALOG.filter(item => item.category == params['data']);

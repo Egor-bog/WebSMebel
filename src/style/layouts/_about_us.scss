@@ -1,4 +1,6 @@
 .first-img {
+    max-width: 1200px;
+    margin: 8rem auto 0;
     background-image: url('../../img/about_us/диван\ Челси\ 3\ ех\ местный\ прямой\ ткань\ Omega\ 37.jpg');
     background-position: bottom;
     background-size: 100%;
@@ -14,8 +16,10 @@
     }
 
 }
-
+ 
 .first-content {
+    max-width: 1200px;
+    margin: 0 auto;
     padding-top: 1rem;
     @include text;
     text-align:center;
@@ -76,6 +80,8 @@
 
 .us {
     background-color: $color-bg;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .second-title {

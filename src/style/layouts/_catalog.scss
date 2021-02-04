@@ -231,12 +231,13 @@ $border-radius: 3px;
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    overflow-y: auto;
 }
 
 .popup-name {
     @include h2;
+    position: fixed;
 }
 
 .first-content {
@@ -244,7 +245,7 @@ $border-radius: 3px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 50rem;
+    margin-top: 3rem;
     @include media-tablet {
         display: block;
         min-height: 50rem;
@@ -267,9 +268,7 @@ $border-radius: 3px;
     font-size: 1.5rem;
 }   
 
-.Second-content{
-    overflow-y: auto;
-}
+
 
 .Second-content-txt{
     @include text;
@@ -283,7 +282,6 @@ $border-radius: 3px;
 .popup-img {
     display: flex;
     overflow: hidden;
-    padding: 2rem;
     width: 75rem;
     height: 50rem;
     @include media-tablet {
@@ -291,7 +289,6 @@ $border-radius: 3px;
         height: 35rem;
         margin: 0 auto;
         overflow: hidden;
-        padding: 0rem;
     }
 
     @include media-mobile {
@@ -322,5 +319,13 @@ $border-radius: 3px;
   .icon-expand:before {
     content: "\f065";
   }
+
+  
+    .scroll-block {height: 70px;width: 340px;overflow-y: scroll;}
+    .scroll-block::-webkit-scrollbar-track {border-radius: 4px;}
+    .scroll-block::-webkit-scrollbar {width: 6px;}
+    .scroll-block::-webkit-scrollbar-thumb {border-radius: 4px;background: #f0f2f5;}
+    .scroll-block:hover::-webkit-scrollbar-thumb {background: #6a7d9b;}
+
 
   
