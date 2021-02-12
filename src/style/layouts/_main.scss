@@ -5,7 +5,6 @@
     &__wrapper {
         max-width: 1200px;
         margin: 0 auto;
-        padding-top: 5rem;
 
         /*
         max-width: $content-width;
@@ -45,6 +44,7 @@
 }
 
 .content__title {
+    padding: 14rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

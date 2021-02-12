@@ -14,16 +14,31 @@ header {
     display: flex;
     top: 0;
     justify-content: space-between;
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
     position: fixed;
     max-width: inherit;
     background-color: $color-bg ; 
 }
 
 .nav__logo {
-    @include h1();
-    letter-spacing: 0.2rem;
+    padding-top: 1rem;
+
+    &__div {
+        width: 25rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 100%;
+        vertical-align: middle;
     
+    }
+}
+
+.burger-menu {
+    padding-top: 2rem;
 }
 
 .burger-menu__active .nav__burger__img {
@@ -84,11 +99,13 @@ header {
 }
 
 .nav__burger__img {
+    
     width: 3rem;
     transition: 1s;
 }    
 
 .nav__basket__img {
+    padding-top: 2rem;
     width : 2.4rem;
 }
 
@@ -162,6 +179,7 @@ header {
 
 
 .nav__basket__span {
+    padding-top: 2rem;
     position: absolute;
     top: 1px;
     left: -2rem;
