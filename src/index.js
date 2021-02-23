@@ -121,8 +121,8 @@ if (document.querySelector('body#basket')) {
                                     <p> ${cartBasket[id]} </p>
                                     <button class="plus" data-id="${id}">+</button>
                                 </div>  
-                             <div class="shopping-element__price">${price.toLocaleString()} USD</div>
-                            <div class="shopping-element__price">${(price*cartBasket[id]).toLocaleString()} USD</div>     
+                             <div class="shopping-element__price">${price.toLocaleString()} BYN</div>
+                            <div class="shopping-element__price">${(price*cartBasket[id]).toLocaleString()} BYN</div>     
                             </li>
                         </ul>    
                         
@@ -138,7 +138,7 @@ if (document.querySelector('body#basket')) {
                         
                         <tr>
                             <td class="shopping-element__name">Сумма:</td>
-                            <td class="shopping-element__price">${sumCatalog.toLocaleString()} USD</td>
+                            <td class="shopping-element__price">${sumCatalog.toLocaleString()} BYN</td>
                         </tr>
                     </table>
                 </div>
