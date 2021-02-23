@@ -93,8 +93,23 @@ h3 {
 
 .filter-conteiner__img__i {
     width: 100%;
-   
+    
 }
+
+.wrapper-filter a:last-child{
+
+    &.filter-conteiner {
+
+        .filter-conteiner__img {
+            justify-content: center;
+
+            .filter-conteiner__img__i {
+                max-width: 120px;
+            }
+        }
+    }
+}
+
 
 
 

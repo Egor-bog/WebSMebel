@@ -190,9 +190,6 @@ if (document.querySelector('body#basket')) {
 // Модалка в каталоге
 if (document.querySelector('body#catalog')) {
 
-    
-
-
 
     const ROOT_popup = document.getElementById('popupS');
 
@@ -204,6 +201,8 @@ if (document.querySelector('body#catalog')) {
              CATALOG.forEach(({ id, name, price, img, about, category }) => {
                  
                  if (idProduct.indexOf(id) !== -1) {
+                    let visible = ""
+                     if (!about.Размерспм) {visible = "hide"}
                     htmlPopup += `
                          <div class="popup-name">${name}
                          </div>
@@ -231,13 +230,13 @@ if (document.querySelector('body#catalog')) {
                                     ${about.размер.глуб} 
                                     </span>
                                 </p>
-                                <p class="first-content-txt-content">
+                                <p class="first-content-txt-content ${visible}">
                                     <b>Размер спального места:</b>
                                     <span>${about.Размерспм}</span>
                                 </p> 
                             </div>
                          </div>
-                         <div class="popup-price">${price.toLocaleString()} USD 
+                         <div class="popup-price">от ${price.toLocaleString()} BYN 
                          </div>
                          <div class="Second-content">
                             <p class="Second-content-txt">
