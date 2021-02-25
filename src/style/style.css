@@ -472,11 +472,6 @@
   color: #afaeae;
 }
 
-section {
-  padding-top: 10rem;
-  background-color: #f6f6f6;
-}
-
 .slider_container {
   max-width: 1200px;
   margin: 0 auto;
@@ -656,6 +651,7 @@ h3 {
 
 .section3 {
   background-color: #f6f6f6;
+  margin-bottom: 5rem;
 }
 
 .section3 .wrapper {
@@ -919,8 +915,8 @@ input[type="submit"]:active {
 }
 
 .contacs-container {
-  width: 100%;
-  margin-top: 9rem;
+  max-width: 1200px;
+  margin: 4rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -941,7 +937,7 @@ input[type="submit"]:active {
 .container-text {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 3rem;
 }
 
