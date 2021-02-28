@@ -27,12 +27,11 @@
 }
 
 .section3 {
-    background-color: $color-bgd;
     margin-bottom: 5rem;
 }
 
 .section3 .wrapper {
-    background-color: $color-bgd;
+    
     @include media-mobile {
         height: 35rem;
     }

@@ -341,20 +341,12 @@
 
 .main {
   background-color: #fff;
-  padding-top: 14rem;
+  padding-top: 2rem;
 }
 
 .main__wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  /*
-        max-width: $content-width;
-        background-image: url('../../../img/main_page/диван\ Челси\ 3\ ех\ местный\ прямой\ ткань\ Omega\ 37.jpg');
-        background-size: cover;
-        overflow: hidden;
-        height: 100%;
-        margin: 0 auto;
-        padding: 0 20px;*/
 }
 
 .content {
@@ -514,6 +506,10 @@
   }
 }
 
+.main-mini__direction {
+  overflow: hidden;
+}
+
 .main-mini__img img {
   overflow: hidden;
   display: flex;
@@ -650,12 +646,7 @@ h3 {
 }
 
 .section3 {
-  background-color: #f6f6f6;
   margin-bottom: 5rem;
-}
-
-.section3 .wrapper {
-  background-color: #f6f6f6;
 }
 
 @media (max-width: 414px) {
