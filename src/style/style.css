@@ -650,12 +650,7 @@ h3 {
 }
 
 .section3 {
-  background-color: #f6f6f6;
   margin-bottom: 5rem;
-}
-
-.section3 .wrapper {
-  background-color: #f6f6f6;
 }
 
 @media (max-width: 414px) {
