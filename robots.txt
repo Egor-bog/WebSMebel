@@ -1,0 +1,5 @@
+User-agent: *
+Crawl-delay: 1
+Host: mariolli.by
+Sitemap: https://mariolli.by/sitemap.xml
+

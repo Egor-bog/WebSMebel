@@ -95,3 +95,52 @@
 .content__title__up__button:hover {
     color: rgb(175, 174, 174);
 }
+
+.contener-opt {
+    margin: 1rem auto 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 350px;
+    background-image: url('../../../img/main_page/sectOpt.jpg');
+    background-size: cover;
+    background-position: 50%;
+}
+
+.opt-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opt-txt {
+    font-family: 'Gordita', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    background: rgba(8, 8, 8, 0.4);
+    padding: 15px 10px;
+    color: #f9f6f6;
+    margin-bottom: 10rem;
+}
+
+.opt-subtxt {
+    font-family: 'Gordita', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    background: rgba(8, 8, 8, 0.4);
+    padding: 15px 10px;
+    color: #f9f6f6;
+}
+
+.icon-svg {
+    -webkit-transform: rotate(90deg); // разворот элемента для разных бразуеров
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.opt-link {
+    text-decoration: none;
+}
