@@ -1,13 +1,13 @@
 <?php
 //Сбор данных из полей формы. 
-$name = $_POST['name'];// Берём данные из input c атрибутом name="name"
-$email = $_POST['email']; // Берём данные из input c атрибутом name="mail"
+$name = $_POST['name'];
+$email = $_POST['email']; 
 $city = $_POST['city']; 
 $comment = $_POST['comment']; 
 $comentUser = $_POST['comment1']; 
-$token = "1503250586:AAFh8LxuCs32Aj65DOMVpNLYknTKub4aaqg"; // Тут пишем токен
-$chat_id = "1229323655"; // Тут пишем ID группы, куда будут отправляться сообщения
-$sitename = "mariolli.by"; //Указываем название сайта
+$token = "1586211798:AAGlkdifQ9e77Xr28jVCrk3Vbt4CgIXYHqI"; 
+$chat_id = "553426980"; 
+$sitename = "mariolli.by"; 
 
 $arr = array(
 

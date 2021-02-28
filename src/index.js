@@ -1,5 +1,5 @@
 
-
+// Бургер меню
 function burgerMenu(selector) {
     let menu = document.querySelector(".burger-menu");
     let button = menu.querySelector(".nav__burger__img")
@@ -30,9 +30,7 @@ function burgerMenu(selector) {
             }
         }
     }
-
 }
-
 burgerMenu ();
 
 
@@ -41,7 +39,6 @@ class KOLPRODUCTS {
     
     render (count) {
         var navBasket = document.querySelector(".nav__basket");
-    //navBasket.onclick= function() {href = "./basket.html";};
     navBasket.style.position = "relative";
     navBasket.style.display = "inline-block";
     
@@ -49,14 +46,10 @@ class KOLPRODUCTS {
         var old =  document.querySelector(".nav__basket__span")
         navBasket.removeChild(old);
     }
-    // создаем элемент
     var elem = document.createElement("span");
     elem.className = "nav__basket__span";
-    // создаем для него текст
     var elemText = document.createTextNode(`${count}`);
-    // добавляем текст в элемент в качестве дочернего элемента
     elem.appendChild(elemText);
-    // добавляем элемент в блок div
     navBasket.appendChild(elem);
     }
 }
@@ -70,11 +63,7 @@ kolProducts.render(localStorageUtil.getProducts().length);
 
 if (document.querySelector('body#basket')) {
     let cart = localStorageUtil.getProducts();
-
-  
-
     function basketObj(cart) {
-        
         var basketO = {};
         CATALOG.forEach(({ id}) => {
             if (cart.indexOf(id) !== -1) {
@@ -83,26 +72,18 @@ if (document.querySelector('body#basket')) {
         });
         return basketO;
     };  
-    
     let cartBasket = (basketObj(cart));
-
     const ROOT_SHOPPING = document.getElementById('shopping');
     let kol = 1;
-
-
     class Shopping {
         handleClear() {
             ROOT_SHOPPING.innerHTML = '';
         }
-    
         render() {
             const productsStore = localStorageUtil.getProducts();
             let htmlCatalog = '';
             let sumCatalog = 0;
             let stringProducts = "";
-
-
-    
             CATALOG.forEach(({ id, name, price, img }) => {
                 if (productsStore.indexOf(id) !== -1) {
                     stringProducts += "Товар:" + name + "  кол-во:" +cartBasket[id] + ".\n" 
@@ -130,7 +111,6 @@ if (document.querySelector('body#basket')) {
                    sumCatalog += price;
                 }
             });
-    
             const html = `
                 <div class="shopping-container">
                     ${htmlCatalog}
@@ -145,7 +125,6 @@ if (document.querySelector('body#basket')) {
             `;
             ROOT_SHOPPING.innerHTML = html;
              var strBasket = document.querySelector("#contactform");
-             
                  var eleminp = document.createElement("input");
                  eleminp.setAttribute('type','hidden');
                  eleminp.setAttribute('name','comment');
@@ -157,7 +136,6 @@ if (document.querySelector('body#basket')) {
     
     const shoppingPage = new Shopping();
     shoppingPage.render();
-
     document.onclick = event => {
         if(event.target.classList.contains('plus')) {
             plusFunction(event.target.dataset.id);
@@ -166,7 +144,6 @@ if (document.querySelector('body#basket')) {
             minusFunction(event.target.dataset.id);
         }
     }
-
     const plusFunction = id => {
         cartBasket[id]++;
         shoppingPage.render();
@@ -183,23 +160,16 @@ if (document.querySelector('body#basket')) {
         localStorageUtil.putProducts(id);
         shoppingPage.render();
     }
-
  }  
 
 
 // Модалка в каталоге
 if (document.querySelector('body#catalog')) {
-
-
     const ROOT_popup = document.getElementById('popupS');
-
     class POPUP {
-
         render (idProduct) {
             let htmlPopup = '';
-
              CATALOG.forEach(({ id, name, price, img, about, category }) => {
-                 
                  if (idProduct.indexOf(id) !== -1) {
                     let visible = ""
                      if (!about.Размерспм) {visible = "hide"}
@@ -256,25 +226,14 @@ if (document.querySelector('body#catalog')) {
                                 <span>${about.материалы.контент}</span>
                             </p>
                          </div> 
-                         
-                         
-                         
                     `;
                 };
             });   
-
              ROOT_popup.innerHTML = htmlPopup; 
         }
-
-
     }
     const popupPage = new POPUP();
-
-
-     
-    
-         let idProduct = '';
-        
+        let idProduct = '';
         const body = document.querySelector('body');
         var popup = document.querySelector(".popup-catalog");
         var popupBtn1 = document.querySelectorAll(".products-element__img");
@@ -282,7 +241,6 @@ if (document.querySelector('body#catalog')) {
         var overlay = document.querySelector(".popup-catalog__body");
         var close = document.querySelector(".popup__close");  
         
-    
         let unlock = true;
         const timeout = 800;
 
@@ -306,7 +264,6 @@ if (document.querySelector('body#catalog')) {
         close.onclick = function () {
             popupClose();
         }   
-        
         
         overlay.onclick = function (elem) {
             if(elem.target.classList.contains('popup-catalog__body')) {
