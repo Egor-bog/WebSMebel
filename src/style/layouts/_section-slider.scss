@@ -75,6 +75,20 @@ h3 {
     justify-content: center;
 }
 
+.wrapper-filter a {
+    transition: 1s;
+}
+
+.wrapper-filter a:hover {
+    box-shadow: 10px 14px 28px rgba(0,0,0,1);
+    -ms-transform: translate(-10px,-10px);
+	-webkit-transform: translate(-10px,-10px);
+	-o-transform: translate(-10px,-10px);
+	-moz-transform: translate(-10px,-10px);
+	transform: translate(-10px,-10px);
+     transition: 1s;
+}
+
 .filter-conteiner {
     margin: 0 2rem;
     width: 18rem;
