@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../src/style/style.css">
         <title>Мягкая мебель</title>
         <link rel="icon" type="image/pmg" href="../img/icons/favicone.png">
+        <!-- Yandex.Metrika counter -->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -21,7 +22,6 @@
        ecommerce:"товарMariOlli"
   });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/73069597" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-192100943-1">
@@ -34,9 +34,10 @@
   gtag('config', 'UA-192100943-1');
 </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="../js/formBasket.js"></script>
+        <script src="../js/form.js"></script>
     </head>
-  <body id = "basket">
+  <body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/73069597" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <header class="header">
         <div class="wrapper">
           <div class="wrapper_cont">
@@ -53,7 +54,6 @@
                   <a href="../index.html" class="burger-menu__link">ГЛАВНАЯ</a>
                   <a href="./about_us.html" class="burger-menu__link">О НАС</a>
                   <a href="./catalog.html" class="burger-menu__link">КАТАЛОГ</a>
-                  <a href="./opt.html" class="burger-menu__link">ПАРТНЕРАМ</a>
                   <a href="./fabrics.html" class="burger-menu__link">ТКАНИ И АКСЕССУАРЫ</a>
                   <a href="./payment.html" class="burger-menu__link">ДОСТАВКА И ОПЛАТА</a>
                   <a href="./contacs.html" class="burger-menu__link">КОНТАКТЫ</a>
@@ -65,7 +65,7 @@
                   <img src="../img/Test/пробую-1.png" alt="logo" class="nav__logo__img">
                 </div>
               </a>
-              <a href = "#" class="nav__basket">
+              <a href = "./basket.html" class="nav__basket">
                 <img src="../img/icons/basket_96252.svg" alt="" class="nav__basket__img">
               </a>
             </div>
@@ -91,45 +91,91 @@
         </a>
       </div>
     </header>
-    
-    <section class="section3 section-basket">
-      <div class="wrapper">
-        <div class="wrapper-backgr-img1">
-          <div class="content1">
-            <div class="content__form">
-              <div class="form">
-                <div class="" id="shopping"></div>
-                <div class="cover">
-
-                  <form id="contactform"> 
-                      <p class="contact"><label for="name">Имя</label></p> 
-                      <input id="name" name="name" placeholder="Ваше имя" required="" tabindex="1" type="text"> 
-               
-                      <p class="contact"><label for="email">Email или телефон</label></p> 
-                      <input id="email" name="email" placeholder="example@sitehere.ru" required="" tabindex="2" type="text"> 
-
-                      <p class="contact"><label for="email">Город</label></p> 
-                      <input id="email" name="city" placeholder="город" required="" tabindex="2" type="text">
-               
-                      <p class="contact"><label for="comment">Коментарий</label></p> 
-                      <textarea name="comment1" id="comment" tabindex="4"></textarea> <br>
-                      <input name="submit" id="submit" tabindex="5" value="Отправить заявку" type="submit"> 	 
-                  </form> 
+      <main>
+        <div class="wrapper">
+          <div class="first-img-opt">
+          </div>
+          <div class="first-content-opt">
+            <p class="first-content-opt-p1">
+              Эксклюзивное производство мебели по заказам оптовых покупателей.
+            </p>  
+            <p class="first-content-opt-p2">
+              Если Вы или Ваща компания умеет продавать качественную мягкую мебель и вы ищите партнеров, которые
+              производили бы для Вас эту мебель, тогда мы можем стать с Вами партнерами. Мы имеем опыт производства
+              эксклюзивных моделей мебели по хаказам крупных компаний.
+            </p>
+            <p class="first-content-opt-p2">
+              Наши требования:
+            </p>
+            <p class="first-content-opt-p2">
+              - взаимовыгода;
+            </p>
+            <p class="first-content-opt-p2">
+              - надежность;
+            </p>
+            <p class="first-content-opt-p2">
+              - доверие;
+            </p>
+            <p class="first-content-opt-p2">
+              - минимальный объем заказа на 1 модель от 15 единиц; 
+            </p>
+            <p class="title-opt">
+              По вопросам сотрудничества обращайтесь:
+          </p>
+            <div class="text__1">
+              <span class="text__1sp">Телефон: </span>
+              <p class="text__1p">+375(29)851-28-10</p>  
+              <span class="text__1sp"> e-mail: </span>
+              <p class="text__1p">mariolligroup@mail.ru</p> 
+            </div>
+          </div>
+        </div>
+      </main>
+      
+    </div>
+      <section class="section3">
+        <div class="wrapper">
+          <div class="wrapper-backgr-img">
+            <div class="content1">
+              <div class="content__text">
+                <div class="text__sub">
+                  Вам нужен надежный партнер?
+                </div>
+                <div class="text__under">
+                  Свяжитесь с нами и мы найдем взаимовыгодные решения
+                </div>
+              </div>
+              <div class="content__form">
+                <div class="form">
+                  <div class="cover">
+                    <form id="contactform"> 
+                        <p class="contact"><label for="name">Имя</label></p> 
+                        <input id="name" name="name" placeholder="Ваше имя" required="" tabindex="1" type="text"> 
+                 
+                        <p class="contact"><label for="email">Email</label></p> 
+                        <input id="email" name="email" placeholder="example@sitehere.ru" required="" tabindex="2" type="text"> 
+                 
+                        <p class="contact"><label for="comment">Коментарий</label></p> 
+                        <textarea name="comment" id="comment" tabindex="4"></textarea> <br>
+                        <input name="submit" id="submit" tabindex="5" value="Отправить" type="submit"> 	 
+                    </form> 
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <footer>
+        <div class="end"></div>
+      </footer>
+      <div class="popup__modal">
+        <div class="overlay"></div>
+        <div class="popup__thx__body">
+          <span class="popup__thx__body_sp">Свасибо, сообщение отправлено!</span>
+        </div>
       </div>
-    </section>
-    <footer>
-      <div class="end"></div>
-    </footer>
-    
-
-
     <script src="../js/catalog/Utils/localStorageUtil.js"></script>
-    <script src="../js/catalog/constant/catalog.js"></script>
     <script src="../src/index.js"></script>
     <script>
       $(".overlay").click(function() {

@@ -665,7 +665,9 @@ h3 {
   max-width: 1200px;
   margin: 8rem auto 0;
   background-image: url("../../img/about_us/диван Челси 3 ех местный прямой ткань Omega 37.jpg");
-  background-position: bottom;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-size: 100%;
   height: 65rem;
 }
@@ -701,12 +703,12 @@ h3 {
 }
 
 .section3 {
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 }
 
 @media (max-width: 414px) {
   .section3 .wrapper {
-    height: 35rem;
+    height: 50rem;
   }
 }
 
@@ -714,10 +716,17 @@ h3 {
   background-image: url("../../img/about_us/sofa-clip-art-31.png");
   background-position: 100% center;
   background-size: 90%;
+  background-repeat: no-repeat;
   height: 30vw;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 414px) {
+  .wrapper-backgr-img {
+    height: 100%;
+  }
 }
 
 .content1 {
@@ -1551,5 +1560,60 @@ a.blubtn:active {
   .first-img-p {
     height: 27rem;
   }
+}
+
+.first-img-opt {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  background-image: url("../../../img/opt/prod.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 65rem;
+}
+
+@media (max-width: 1200px) {
+  .first-img-opt {
+    height: 52rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-img-opt {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .first-img-opt {
+    height: 27rem;
+  }
+}
+
+.first-content-opt {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  font-family: Gordita,sans-serif;
+  font-size: 14px;
+  color: #747577;
+  line-height: 1.7;
+  font-size: 2rem;
+}
+
+.first-content-opt-p1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.title-opt {
+  font-family: 'Gordita', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-transform: none;
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+.first-img-opt {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    background-image: url('../../../img/opt/prod.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 65rem;
+    @include media-laptop {
+        height: 52rem;
+    }
+    @include media-tablet {
+        height: 30rem;
+    }
+    @include media-mobile {
+        height: 27rem;
+    }
+
+}
+ 
+.first-content-opt {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    @include text;
+    font-size: 2rem;
+}
+
+.first-content-opt-p1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.title-opt {
+    @include h3;
+    text-transform: none;
+    margin: 1rem 0;
+}
